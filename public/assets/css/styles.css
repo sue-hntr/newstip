@@ -1,0 +1,5 @@
+.background-image {
+    height: 100%;
+    background-image: url(/public/assets/img/nature.jpg);
+    background-size: cover;
+}

@@ -29,8 +29,27 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
+
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+// // Import routes and give the server access to them.
+var routes = require("./controllers/newstipController.js");
+
+app.use(routes);
+
+
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/newstipsdb", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/newstipsdb", { useNewUrlParser: true });
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newstipsdb";
+
+mongoose.connect(MONGODB_URI);
+
+
 
 // Routes
 // A GET route for scraping the echoJS website
