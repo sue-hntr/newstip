@@ -15,27 +15,18 @@ router.get("/", function(req, res) {
       console.log(hbsObject);
       res.render("index", hbsObject);
     });
-      
-      
-    //   // function(data) {
-    //   // var hbsObject = {
-    //   //   newsitems: data
-    //   // };
-    //   // console.log(hbsObject);
-    //   // res.render("index", hbsObject);
-    // });
   });
   
-  // router.post("/api/newsitems", function(req, res) {
-  //   newsitem.insertOne([
-  //     "newsitem_name", "devoured"
-  //   ], [
-  //     req.body.newsitem_name, req.body.devoured
-  //   ], function(result) {
-  //     // Send back the ID of the new quote
-  //     res.json({ id: result.insertId });
-  //   });
-  // });
+  router.post("/api/newsitems", function(req, res) {
+    newsitem.insertOne([
+      "newsitem_name", "devoured"
+    ], [
+      req.body.newsitem_name, req.body.devoured
+    ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+  });
 
 
   router.put("/api/newsitems/:id", function(req, res) {

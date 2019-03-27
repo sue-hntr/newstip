@@ -1,5 +1,31 @@
 .background-image {
     height: 100%;
-    background-image: url(/public/assets/img/nature.jpg);
+    background-image: url("assets/img/nature.jpg");
     background-size: cover;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 50px;
+    
+}
+.grass{
+    background-color: #ccffcc!important;
+}
+
+.card-header{
+    background-color: green;
+    color: white;
+}
+.card-header a{
+    color: white;
+    text-decoration: none;
+}
+
+.card-header a:hover{
+    color: #c2f0c2;
+    text-decoration: none;
 }

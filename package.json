@@ -1,5 +1,5 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "newstiplist",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -18,6 +18,10 @@
     "url": "https://github.com/sue-hntr/Newstips/issues"
   },
   "homepage": "https://github.com/sue-hntr/Newstips#readme",
+  "start": "node server.js",
+  "engines": {
+    "node": "10.x"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
